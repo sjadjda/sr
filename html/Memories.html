@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="../css/jquery.fullPage.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+       .interactive-button {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.5);
+            transition: all 0.3s ease;
+            display: none; /* 初始隐藏按钮 */
+        }
+
+       .interactive-button:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7);
+        }
+
+       .interactive-button:active {
+            transform: translateX(-50%) scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgcolor">
+        <div style="z-index:100;" id="dowebok">
+            <!--第一屏-->
+            <div class="section">
+                <div class="ly-box01">
+                    <div class="ly-txt01">
+                        <p class="ly-stxt01">🎂「ʜᴀᴘᴘʏʙɪʟʀᴛʜᴅᴀʏ🌷」</p>
+                        <p class="ly-stxt02">✨事事无心绪，岁岁无困苦✌</p>
+                        <p class="ly-stxt03">🎉生日快乐，诸事顺遂🎂</p>
+                        <p class="ly-stxt04">🎈平安喜乐，万事如意！🎂</p>
+                        <!-- ，在认清 -->
+                        <p class="ly-stxt05">🎈新的一岁仍要满怀期待和热爱🧸</p>
+                        <!-- <p class="ly-stxt05">生活的真相后，更加热爱它吧！</p> -->
+                    </div>
+                    <div class="ly-txt02">
+                        <p class="ly-stxt06">🥳祝你：吃鸡把把C🌈</p>
+                        <p class="ly-stxt07">🥳祝你：王者把把赢🌈</p>
+                        <p class="ly-stxt08">🥳祝你：天天开心，快乐常伴🌈</p>
+                        <p class="ly-stxt09">🥳祝你：人生处处遇佳人🌈</p>
+                        <p class="ly-stxt10">🥳祝你：往下拉！🎉</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--第二屏-->
+            <div class="section">
+                <div class="timeline"></div>
+                <div class="timepoint11"></div>
+                <div class="ly-box11">
+                    <div class="ly-txt11" style="width:100%;height:10%;left:10%">
+
+                    </div>
+                    <div class="ly-txt12">
+
+                    </div>
+                    <div class="ly-imgbox11" style="height:80%">
+                        <img class="ly-img11" src="../img/zt.png" style="height:100%">
+                    </div>
+                </div>
+                <div class="ly-triangle11"></div>
+
+                <div class="ly-box12">
+                    <div class="ly-txt13" style="width:100%;height:10%;left:10%">
+
+                    </div>
+                    <div class="ly-txt14">
+                        <p>今天是你的生日，回想一下，这是第一次给你送生日祝福</p>
+                        <p>这一次的祝福采取这一种方式，不知道你喜不喜欢。</p>
+                        <p>如果用手写信的方式，字太丑了，没眼看。</p>
+                        <p>这一年经过的事情还是蛮多的，祝愿你在生活里做自己想</p>
+                        <p>做。无论人或事，选自己喜欢的。心想事成，快乐常伴，</p>
+                    </div>
+                    <div class="ly-imgbox11" style="height:50%">
+                        <img class="ly-img11" src="../img/timg.jpg" style="height:100%">
+                    </div>
+                </div>
+                <div class="ly-triangle12"></div>
+
+            </div>
+        </div>
+
+        <button class="interactive-button" id="surpriseButton">点击有惊喜✨</button>
+
+        <audio src="../music/1.mp3" autoplay="autoplay" loop="loop"></audio>
+
+        <script src="../js/jquery-1.8.3.min.js"></script>
+        <script src="../js/jquery.fullPage.min.js"></script>
+        <script src="../js/diy.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dowebok').fullpage({
+                    // fullpage插件配置项
+                });
+
+                // 使用setTimeout延迟显示按钮
+                setTimeout(function () {
+                    $('#surpriseButton').fadeIn(500); // 淡入显示按钮，500毫秒的淡入效果，你也可以改成直接显示：$('#surpriseButton').show();
+                }, 10000); // 延迟5秒（5000毫秒）
+
+                $('#surpriseButton').click(function () {
+                    // 点击按钮后跳转到另一个HTML页面
+                    window.location.href ='EasterEgg.html'; // 这里修改为你想要跳转的页面URL
+                });
+            });
+        </script>
+          <audio src="../music/1.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+
+</html>
