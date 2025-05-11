@@ -22,7 +22,7 @@
             cursor: pointer;
             box-shadow: 0 5px 20px rgba(255, 107, 107, 0.5);
             transition: all 0.3s ease;
-            display: none; /* 初始隐藏按钮 */
+            display: none; 
         }
 
        .interactive-button:hover {
@@ -74,17 +74,17 @@
         <script>
             $(document).ready(function () {
                 $('#dowebok').fullpage({
-                    // fullpage插件配置项
+
                 });
 
-                // 使用setTimeout延迟显示按钮
+
                 setTimeout(function () {
-                    $('#surpriseButton').fadeIn(500); // 淡入显示按钮，500毫秒的淡入效果，你也可以改成直接显示：$('#surpriseButton').show();
+                    $('#surpriseButton').fadeIn(500); $('#surpriseButton').show();
                 }, 25000); 
 
                 $('#surpriseButton').click(function () {
-                    // 点击按钮后跳转到另一个HTML页面
-                    window.location.href ='BirthdayCake.html'; // 这里修改为你想要跳转的页面URL
+
+                    window.location.href ='BirthdayCake.html'; 
                 });
             });
         </script>
